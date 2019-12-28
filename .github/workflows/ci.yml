@@ -14,3 +14,6 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+      - name: Deploy
+        if: github.ref == 'refs/heads/master'
+        run: echo "Hello, world!"
